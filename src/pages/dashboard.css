@@ -1,0 +1,44 @@
+:root {
+  --backgroundColor: #f4f0f0;
+  --button: #2b7fff;
+  --inputColor: #f2f4f8;
+  --cardColor: #ffffff;
+}
+
+.container-dashboard {
+  /* padding: 2vw; */
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f0f0;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 1vw;
+}
+
+.btn-create-surat {
+  width: 80%;
+  display: inline-block;
+  padding: 20px 18px;
+  background: var(--button);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.box-materi {
+  border-radius: 10px;
+  width: 80%;
+  height: auto;
+  /* padding: 0vw 1vw 0vw 1vw; */
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--cardColor);
+}

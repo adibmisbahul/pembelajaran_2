@@ -1,0 +1,197 @@
+/* RESET */
+:root {
+  --backgroundColor: #f4f0f0;
+  --button: #2b7fff;
+  --inputColor: #f2f4f8;
+  --cardColor: #ffffff;
+}
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #f5f7fa;
+  color: #1a1a1a;
+}
+
+/* CONTAINER */
+.container {
+  /* max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px; */
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* GRID LAYOUT */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* CARD STYLE */
+.grid > div {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* FORM */
+input,
+textarea,
+select {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e1e5eb;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.15);
+}
+
+/* TEXTAREA */
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* SELECT STYLE */
+select {
+  max-width: 250px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* SURAT PREVIEW */
+.surat {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 40px;
+  font-family: "Times New Roman", serif;
+  line-height: 1.8;
+  color: #222;
+  min-height: 500px;
+  /* border: 1px solid #e5e7eb; */
+}
+
+/* HEADER SURAT */
+.surat p {
+  margin-bottom: 10px;
+}
+
+/* ISI SURAT */
+.surat .isi {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* ========================= */
+/* ✨ STYLE VARIATIONS */
+/* ========================= */
+
+/* FULL BLOCK */
+.full-block p {
+  margin-left: 0;
+  text-indent: 0;
+}
+
+/* SEMI BLOCK */
+.semi-block p {
+  margin-left: 0;
+}
+
+.semi-block .penutup {
+  margin-left: 50%;
+}
+
+/* INDENTED */
+.indented .isi {
+  text-indent: 40px;
+}
+
+/* HANGING */
+.hanging .isi {
+  text-indent: -20px;
+  padding-left: 20px;
+}
+
+/* OFFICIAL */
+.official {
+  font-family: "Times New Roman", serif;
+  letter-spacing: 0.3px;
+}
+
+.official p {
+  margin-bottom: 12px;
+}
+
+/* ========================= */
+/* ✨ EXTRA DETAIL (Modern Feel) */
+/* ========================= */
+
+/* subtle divider */
+.surat::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 60px;
+  background: #4a90e2;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+/* hover effect preview */
+.surat:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn-download {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding: 10px 18px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-download:hover {
+  background: #357abd;
+  transform: translateY(-1px);
+}
+
+.btn-download:active {
+  transform: scale(0.98);
+}
