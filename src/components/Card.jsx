@@ -1,7 +1,7 @@
 import "./card.css";
 import iconComputer from "../assets/computer.svg";
 const Card = (props) => {
-  const { image, title, materi, quiz, bgColor } = props;
+  const { image, title, materi, quiz, bgColor, link } = props;
 
   return (
     <div className="card">
@@ -14,7 +14,9 @@ const Card = (props) => {
           {materi} Materi | {quiz} Quiz
         </p>
 
-        <button className="card-btn">View</button>
+        <button className="card-btn">
+          <a href={link}>View</a>
+        </button>
       </div>
     </div>
   );

@@ -12,7 +12,6 @@ import calculator from "../assets/calculator.png";
 
 const DashboardPage = () => {
   const navigate = useNavigate();
-
   function handleRouteAddSurat() {
     navigate("./generate-surat");
   }
@@ -20,42 +19,60 @@ const DashboardPage = () => {
   const [dataMateri, setDataMateri] = useState([
     {
       id: 1,
-      title: "Jenis-Jenis Surat bisnis",
+      title: "DASAR DASAR KORESPONDENSI",
       image: iconComputer,
       bgColor: "pink",
+      link: "https://youtu.be/iIGsgerROxA?si=pwTbK4O0P1Mk1cj-",
     },
     {
       id: 2,
-      title: "Pengertian & Fungsi Surat Bisnis",
+      title: "JENIS² SURAT",
       image: prosAndCons,
       bgColor: "#8e51ff",
+      link: "https://youtu.be/dXrsrwHZDxE?si=23EfT2dj-gn_IKgG",
     },
     {
       id: 3,
-      title: "Struktur Surat Resmi",
+      title: "BAGIAN/STRUKRUR SURAT + CONTOH",
       image: stickyNotes,
       bgColor: "#05df72",
+      link: " https://youtu.be/iCmrsdJ58b8?si=iQAdtE649poYVbT4",
     },
     {
       id: 4,
-      title: " Bahasa & Etika Penulisan",
+      title: "BENTUK/STYLE SURAT",
       image: uiDesign,
       bgColor: "#7ccf00",
+      link: "https://youtu.be/Fp2-BErIlGs?si=UKudWcYF_-WuscBB",
     },
     {
       id: 5,
-      title: "Surat Digital (Modern)",
+      title: "DEFINISI + FYNGSI SURAT NIAGA",
       image: iconComputer,
       bgColor: "#0084d1",
+      link: "5. https://youtu.be/8O1_P0PR5LY?si=eY2Sxc1nf4N4sHeK",
     },
     {
       id: 6,
-      title: "Format & Standar Surat",
+      title: "JENIS JENIS SURAT NIAGA + ISINYA ",
       image: calculator,
       bgColor: "#4a5565",
+      link: " https://youtu.be/5Y1fCsuCYWw?si=s8jCotEAMg7Zg3la",
     },
-    { id: 1, title: "surat", image: folderIcon, bgColor: "#f54900" },
-    { id: 1, title: "surat", image: pencil, bgColor: "#372aac" },
+    {
+      id: 7,
+      title: "TUTOR MENULIS SURAT NIAGA DI WORD",
+      image: folderIcon,
+      bgColor: "#f54900",
+      link: "https://youtu.be/wE2fJ5yjcDk?si=jCPa6y9Pm9gjYfHV",
+    },
+    {
+      id: 8,
+      title: "PENULISAN SURAT NIAGA YG EFEKTIF",
+      image: pencil,
+      bgColor: "#372aac",
+      link: "https://youtu.be/gaakNYoWUX8?si=6PnV24uYVb044SfO",
+    },
   ]);
   return (
     <>
@@ -67,6 +84,7 @@ const DashboardPage = () => {
                 title={item.title}
                 image={item.image}
                 bgColor={item.bgColor}
+                link={item.link}
               />
             );
           })}
