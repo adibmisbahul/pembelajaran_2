@@ -50,7 +50,7 @@ const DashboardPage = () => {
       title: "DEFINISI + FYNGSI SURAT NIAGA",
       image: iconComputer,
       bgColor: "#0084d1",
-      link: "5. https://youtu.be/8O1_P0PR5LY?si=eY2Sxc1nf4N4sHeK",
+      link: "https://youtu.be/8O1_P0PR5LY?si=eY2Sxc1nf4N4sHeK",
     },
     {
       id: 6,
