@@ -261,15 +261,129 @@ export default function GeneratorSurat() {
         <head>
           <title>Surat - ${data.subject}</title>
           <style>
+            *, *::before, *::after { box-sizing: border-box; }
+
             body {
               margin: 0;
               padding: 32px 48px;
-              font-family: 'Times New Roman', serif;
+              font-family: 'Times New Roman', Times, serif;
               font-size: 11pt;
               color: #1a1a1a;
+              background: white;
             }
+
             @media print {
               body { padding: 20mm 25mm; }
+            }
+
+            /* ---- Letter shell ---- */
+            .letter {
+              font-family: 'Times New Roman', Times, serif;
+              font-size: 11pt;
+              color: #1a1a1a;
+              line-height: 1.5;
+              width: 100%;
+            }
+
+            /* ---- Letterhead ---- */
+            .letterhead {
+              display: flex;
+              align-items: center;
+              border-bottom: 3px double #1a1a1a;
+              padding-bottom: 10px;
+              margin-bottom: 14px;
+              gap: 14px;
+            }
+            .letterhead__logo {
+              width: 52px;
+              height: 52px;
+              flex-shrink: 0;
+              background: linear-gradient(135deg, #1a6b3c 40%, #f5a623 100%);
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: white;
+              font-weight: bold;
+              font-size: 13px;
+              letter-spacing: -1px;
+              -webkit-print-color-adjust: exact;
+              print-color-adjust: exact;
+            }
+            .letterhead__info {
+              flex: 1;
+              text-align: center;
+            }
+            .letterhead__company {
+              font-weight: bold;
+              font-size: 13pt;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            }
+            .letterhead__address,
+            .letterhead__phone,
+            .letterhead__contact {
+              font-size: 9.5pt;
+            }
+            .letterhead__link {
+              color: #1a56db;
+              text-decoration: underline;
+            }
+
+            /* ---- Letter meta ---- */
+            .letter-meta { margin-bottom: 14px; }
+            .letter-meta table { border-collapse: collapse; }
+            .letter-meta td { padding: 0; }
+            .letter-meta td:first-child { padding-right: 8px; }
+            .letter-meta td:nth-child(2) { padding-right: 8px; }
+            .letter-meta--full-block .meta-date { margin-bottom: 8px; }
+            .letter-meta--split table { width: 100%; border-collapse: collapse; }
+            .letter-meta--split .meta-left { width: 50%; }
+            .letter-meta--split .meta-right { text-align: right; vertical-align: top; }
+
+            /* ---- Recipient ---- */
+            .letter-recipient { margin-bottom: 14px; }
+            .letter-recipient--official {
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+              margin-bottom: 14px;
+            }
+            .letter-recipient--official .recipient-spacer { width: 50%; }
+            .letter-recipient--official .recipient-block { text-align: right; }
+            .recipient-indent-1 { padding-left: 20px; }
+            .recipient-indent-2 { padding-left: 40px; }
+
+            /* ---- Opening ---- */
+            .letter-opening { margin-bottom: 14px; }
+
+            /* ---- Body ---- */
+            .letter-body { margin-bottom: 14px; }
+            .letter-body p {
+              margin: 0 0 14px 0;
+              text-align: justify;
+              line-height: 1.7;
+            }
+            .letter-body p.para-indent { text-indent: 40px; }
+            .numbered-list { margin-bottom: 12px; }
+            .numbered-list-item { margin-bottom: 2px; }
+            .numbered-list-item--indent { padding-left: 32px; }
+            .hanging-para { margin-bottom: 14px; display: flex; align-items: flex-start; }
+            .hanging-para__inner { min-width: 0; flex: 1; }
+            .hanging-continuation { padding-left: 40px; }
+
+            /* ---- Closing ---- */
+            .letter-closing { margin-top: 20px; }
+            .letter-closing--left { text-align: left; }
+            .letter-closing--right { text-align: right; }
+            .letter-closing__name { margin-top: 48px; font-weight: bold; }
+
+            /* ---- Style label ---- */
+            .letter-style-label {
+              margin-top: 24px;
+              font-style: italic;
+              font-size: 9pt;
+              color: #888;
             }
           </style>
         </head>
