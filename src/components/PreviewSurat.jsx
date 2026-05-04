@@ -1,6 +1,9 @@
 export default function PreviewSurat({ data, styleType }) {
   return (
     <div className={`surat ${styleType}`}>
+      <p className="kops surat" style={{ fontWeight: 600 }}>
+        PT INDONESIA FASHION
+      </p>
       <p className="header">{data.nama}</p>
       <p>{data.alamat}</p>
       <p>{data.tanggal}</p>
